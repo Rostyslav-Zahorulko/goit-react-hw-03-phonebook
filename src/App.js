@@ -13,6 +13,39 @@ class App extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    // console.log('ComponentDidMount from App');
+
+    const contacts = localStorage.getItem('contacts');
+    // console.log('contacts: ', contacts);
+
+    const parsedContacts = JSON.parse(contacts);
+    // console.log('parsedContacts :', parsedContacts);
+
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // console.log('ComponentDidUpdate from App');
+
+    // console.log('prevState.contacts: ', prevState.contacts);
+    // console.log('this.state.contacts: ', this.state.contacts);
+
+    const prevContacts = prevState.contacts;
+    const nextContacts = this.state.contacts;
+
+    // console.log(
+    //   'prevContacts === nextContacts: ',
+    //   prevContacts === nextContacts,
+    // );
+
+    if (prevContacts !== nextContacts) {
+      localStorage.setItem('contacts', JSON.stringify(nextContacts));
+    }
+  }
+
   addContact = (name, number) => {
     const { contacts } = this.state;
     const newContact = { name, number, id: uuidv4() };
