@@ -10,10 +10,10 @@
   margin-top: 5px;
   border: 2px solid silver;
   font-size: 12px;
-}
 
-.filter-input:hover,
-.filter-input:focus {
-  outline: none;
-  border: 2px solid skyblue;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 2px solid skyblue;
+  }
 }

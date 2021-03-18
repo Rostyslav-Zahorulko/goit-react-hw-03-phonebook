@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import './Filter.css';
+import './Filter.scss';
 
 const Filter = ({ filter, onChange }) => (
   <label className="filter">

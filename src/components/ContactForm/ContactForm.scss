@@ -2,7 +2,7 @@
   width: 400px;
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #000000;
+  border: 1px solid black;
 }
 
 .form-field {
@@ -17,12 +17,12 @@
   margin-top: 5px;
   border: 2px solid silver;
   font-size: 12px;
-}
 
-.form-input:hover,
-.form-input:focus {
-  outline: none;
-  border: 2px solid skyblue;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 2px solid skyblue;
+  }
 }
 
 .add-contact-button {
@@ -31,15 +31,15 @@
   border: 2px solid silver;
   border-radius: 5px;
   font-size: 12px;
-  background-color: #ffffff;
-}
+  background-color: white;
 
-.add-contact-button:hover,
-.add-contact-button:focus {
-  outline: none;
-  border: 2px solid skyblue;
-}
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 2px solid skyblue;
+  }
 
-.add-contact-button:active {
-  background-color: skyblue;
+  &:active {
+    background-color: skyblue;
+  }
 }

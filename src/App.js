@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+import Container from './components/Container';
 import ContactForm from './components/ContactForm';
 import Filter from './components/Filter';
 import ContactList from './components/ContactList';
@@ -89,7 +90,7 @@ class App extends Component {
     const filteredContacts = this.getFilteredContacts();
 
     return (
-      <div>
+      <Container>
         <h1 className="app-title">Phonebook</h1>
 
         <ContactForm onSubmit={this.addContact} />
@@ -99,7 +100,7 @@ class App extends Component {
         <Filter filter={filter} onChange={this.filterContactsByName} />
 
         <ContactList contacts={filteredContacts} onClick={this.deleteContact} />
-      </div>
+      </Container>
     );
   }
 }

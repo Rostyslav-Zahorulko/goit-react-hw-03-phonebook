@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import './ContactListItem.css';
+import './ContactListItem.scss';
 
 const ContactListItem = ({ name, number, onClick }) => (
   <li className="contact-list-item">
